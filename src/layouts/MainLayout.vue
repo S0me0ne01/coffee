@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf" style="background-color: #ffffff">
+  <q-layout view="lHh Lpr lFf" style="background-color: #ffbc7d">
     <!-- HEADER -->
     <q-header elevated>
       <q-toolbar style="background-color: #ffbc7d">
@@ -26,6 +26,12 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <div style="background: linear-gradient(to bottom, #ffbc7d, #f1b781); color: white">
+      <q-toolbar>
+        <q-toolbar-title header style="color:#dc4e04; font-weight: bold">&nbsp; Coffee | 2023</q-toolbar-title>
+      </q-toolbar>
+    </div>
   </q-layout>
 </template>
 
@@ -35,46 +41,22 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    title: 'Instagram',
+    icon: 'photo_camera',
+    caption: 'Ещё больше фото здесь',
+    link: 'https://instagram.com'
   },
   {
     title: 'Twitter',
-    caption: '@quasarframework',
+    caption: 'Наш аккаунт в Twitter',
     icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    link: 'https://x.com'
   },
   {
     title: 'Facebook',
-    caption: '@QuasarFramework',
+    caption: 'Мы в Facebook',
     icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'https://facebook.com'
   }
 ]
 
