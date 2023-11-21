@@ -1,5 +1,5 @@
 <template>
-  <q-page style="background-color: hsl(23, 91%, 82%)">
+  <q-page style="background-color: hsl(0, 0%, 100%)">
     <!-- CAROUSEL -->
     <div class="q-md">
       <q-carousel animated v-model="slide" class="carousel" :class="{ 'full-height': isFullHeight }" arrows navigation
@@ -13,33 +13,34 @@
 
 
     <!-- CONTENT -->
-    <div class="q-md row" style="padding-top: 10px; padding-bottom: 10px; margin: auto">
+    <div class="q-md row" style="margin: auto">
 
       <!-- ENROLL -->
-      <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding-bottom: 10px">
+      <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding: 10px">
         <q-card square dark class="my-card">
           <q-img src="/images/slide1.jpg" :ratio="16 / 12">
-            <div class="absolute-center" style="background: rgba(245, 167, 78, 0.8)">
-              <p style="font-size: large; font-weight: bold; color: rgb(50, 50, 50)">Шаг к мечте</p>
-              <p style="font-size: large; color: rgb(35, 35, 35)">Достаточно лишь захотеть. Мы поможем.</p>
+            <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
+              <p style="font-size: large; font-weight: bold">О нас</p>
+              <p style="font-size: large">Ознакомтесь с нашей захватывающей историей и ценностями</p>
 
               <p style="font-size: medium; font-weight: bold; text-shadow: 1px rgb(35, 35, 35)">
-                <a @click="buyDialog = true">Записаться ></a>
+                <q-btn href="/about" outline rounded color="white" label="Подробнее" />
               </p>
             </div>
           </q-img>
         </q-card>
       </div>
 
-      <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding-bottom: 10px">
-        <q-card square dark class="my-card">
+      <div class="q-md col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center" style="padding: 10px">
+        <q-card dark class="my-card">
           <q-img src="/images/menu.jpg" :ratio="16 / 12">
-            <div class="absolute-center" style="background: rgba(245, 167, 78, 0.8)">
-              <p style="font-size: large; font-weight: bold; color: rgb(50, 50, 50)">Меню</p>
-              <p style="font-size: large; color: rgb(35, 35, 35)">Здесь вы можете посмотреть актуальную версию нашего меню</p>
+            <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
+              <p style="font-size: large; font-weight: bold">Меню</p>
+              <p style="font-size: large">Здесь вы можете посмотреть актуальную версию нашего меню
+              </p>
 
               <p style="font-size: medium; font-weight: bold; text-shadow: 1px rgb(35, 35, 35)">
-                <a @click="buyDialog = true">Показать ></a>
+                <q-btn outline rounded color="white" label="Показать" />
               </p>
             </div>
           </q-img>
@@ -49,20 +50,23 @@
 
 
     <!-- INFO -->
-    <div class="q-md row flex flex-center" style="padding-bottom: 20px">
-      <q-banner rounded class="text-center"
-        style="background-color: #f5a74ecc; max-width: 900px; margin: 20px; padding: 15px;">
+    <q-container>
+      <q-card square
+        style="border-radius: 10px; overflow: hidden; background: linear-gradient(to bottom, #ffa74a, #ffa74a)">
+        <q-card-section style="text-align: center; padding: 20px">
+          <h2 style="font-size: 50px">Наше расположение</h2>
+        </q-card-section>
 
-        <p style="font-size: 20px; font-weight: bold">ул. Абая, дом 2</p>
-        <p style="font-size: 18px">
-          <a href="" style="color: #3b1b04; font-weight: bold">+7-700-123-4567</a>
-        </p>
-        <q-chip color="grey-10" :ripple="false" text-color="white" square>
-          Пн-Сб: 8.00-21.00, Вск: 10:00-00:00
-        </q-chip>
-      </q-banner>
-    </div>
-
+        <q-card-section style="text-align: center; padding: 20px">
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.8932537808346!2d76.86659347608303!3d43.23269767112514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369a87d5f7551%3A0x8e70b7a65d73f497!2sAbay%20Ave%202%2C%20Almaty%20050000!5e0!3m2!1sen!2skz!4v1700214471126!5m2!1sen!2skz"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </q-card-section>
+      </q-card>
+    </q-container>
   </q-page>
 </template>
 
@@ -84,3 +88,13 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.map-frame {
+  max-width: 400px;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-color: black;
+}
+</style>

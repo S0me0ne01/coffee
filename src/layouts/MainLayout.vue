@@ -1,9 +1,9 @@
 <template>
-  <q-layout view="lHh Lpr lFf" style="background-color: #ffbc7d">
+  <q-layout view="lHh Lpr lFf" style="background-color: #ffffff">
     <!-- HEADER -->
     <q-header elevated>
-      <q-toolbar style="background-color: #ffbc7d">
-        <q-btn flat dense round icon="menu" aria-label="Menu" style="color: #dc4e04" @click="toggleLeftDrawer" />
+      <q-toolbar style="background-color: #ffffff">
+        <q-btn flat dense round icon="menu" aria-label="Menu" style="color: #000000" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>
           &nbsp;&nbsp;<a href="/"><img src="/images/logo.png" height="50" style="padding-top: 8px" /></a>
@@ -13,9 +13,9 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-not-above bordered
-      style="background: linear-gradient(to bottom, #ffbc7d, #f1b781)">
+      style="background: linear-gradient(to bottom, #ffffff, #ffffff)">
       <q-list>
-        <q-item-label header style="color: #dc4e04">
+        <q-item-label header style="color: #000000">
           Полезные ссылки
         </q-item-label>
 
@@ -27,9 +27,9 @@
       <router-view />
     </q-page-container>
 
-    <div style="background: linear-gradient(to bottom, #ffbc7d, #f1b781); color: white">
+    <div style="background: linear-gradient(to bottom, #000000, #000000); color: white">
       <q-toolbar>
-        <q-toolbar-title header style="color:#dc4e04; font-weight: bold">&nbsp; Coffee | 2023</q-toolbar-title>
+        <q-toolbar-title header style="font-weight: bold">&nbsp; Coffee | 2023</q-toolbar-title>
       </q-toolbar>
     </div>
   </q-layout>
