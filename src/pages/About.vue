@@ -4,7 +4,7 @@
     <div class="article-content">
 
       <div class="image-container">
-        <img src="/images/slide1.jpg" alt="Article Image" class="rounded-image" />
+        <img src="/images/slide1.jpg" class="rounded-image" />
       </div>
 
       <div class="article-text">

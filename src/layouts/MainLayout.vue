@@ -29,7 +29,14 @@
 
     <div style="background: linear-gradient(to bottom, #000000, #000000); color: white">
       <q-toolbar>
-        <q-toolbar-title header style="font-weight: bold">&nbsp; Coffee | 2023</q-toolbar-title>
+        <q-toolbar-title header style="font-weight: bold">
+          &nbsp; &nbsp; Coffee | 2023 | Abay Ave 2 &nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp" color="white"
+              size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter" color="white"
+              size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-instagram" color="white" size="md"></q-icon></a>
+        </q-toolbar-title>
       </q-toolbar>
     </div>
   </q-layout>
@@ -42,20 +49,20 @@ import EssentialLink from 'components/EssentialLink.vue'
 const linksList = [
   {
     title: 'Instagram',
-    icon: 'photo_camera',
+    icon: 'ion-logo-instagram',
     caption: 'Ещё больше фото здесь',
     link: 'https://instagram.com'
   },
   {
     title: 'Twitter',
     caption: 'Наш аккаунт в Twitter',
-    icon: 'rss_feed',
+    icon: 'ion-logo-twitter',
     link: 'https://x.com'
   },
   {
-    title: 'Facebook',
-    caption: 'Мы в Facebook',
-    icon: 'public',
+    title: 'WhatsApp',
+    caption: 'Мы в WhatsApp',
+    icon: 'ion-logo-whatsapp',
     link: 'https://facebook.com'
   }
 ]
