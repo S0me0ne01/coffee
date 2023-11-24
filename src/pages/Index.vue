@@ -54,7 +54,7 @@
       <q-card square
         style="border-radius: 10px; overflow: hidden; background: linear-gradient(to bottom, #FFFFFF, #FFFFFF)">
         <q-card-section style="text-align: center; padding: 0px">
-          <h2 style="font-size: 50px">Наше расположение</h2>
+          <h2 style="font-size: 40px">Ул. Абая, дом 2</h2>
         </q-card-section>
 
         <q-card-section style="text-align: center; padding: 30px; padding-top: 0px">
