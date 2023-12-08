@@ -8,9 +8,8 @@
       </div>
 
       <div class="article-text">
-        <h1 style="margin-top: 10px">Наша цель - Лучший кофе</h1>
-        <p style="font-size: 30px">С самого открытия в далеком 2022 году мы всегда стремились предоставить нашим клиентам
-          лучшее качество услуг и в первую очередь - кофе. Вы можете убедиться в этом сами!</p>
+        <h1 style="margin-top: 10px">{{ $t("about.title") }}</h1>
+        <p style="font-size: 30px">{{ $t("about.text") }}</p>
       </div>
 
     </div>

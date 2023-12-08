@@ -20,11 +20,11 @@
         <q-card square dark class="my-card">
           <q-img src="/images/slide1.jpg" :ratio="16 / 12">
             <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
-              <p style="font-size: large; font-weight: bold">О нас</p>
-              <p style="font-size: large">Ознакомьтесь с нашей захватывающей историей и ценностями</p>
+              <p style="font-size: large; font-weight: bold">{{ $t("content.title1") }}</p>
+              <p style="font-size: large">{{ $t("content.text1") }}</p>
 
               <p style="font-size: medium; font-weight: bold; text-shadow: 1px rgb(35, 35, 35)">
-                <q-btn href="/about" outline rounded color="white" label="Подробнее" />
+                <q-btn href="/about" outline rounded color="white" :label="$t('content.show1')" />
               </p>
             </div>
           </q-img>
@@ -35,12 +35,11 @@
         <q-card dark class="my-card">
           <q-img src="/images/menu.jpg" :ratio="16 / 12">
             <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
-              <p style="font-size: large; font-weight: bold">Меню</p>
-              <p style="font-size: large">Здесь вы можете посмотреть актуальную версию нашего меню
-              </p>
+              <p style="font-size: large; font-weight: bold">{{ $t("content.title2") }}</p>
+              <p style="font-size: large">{{ $t("content.text2") }}</p>
 
               <p style="font-size: medium; font-weight: bold; text-shadow: 1px rgb(35, 35, 35)">
-                <q-btn outline rounded color="white" label="Показать" />
+                <q-btn outline rounded color="white" :label="$t('content.show2')" />
               </p>
             </div>
           </q-img>
@@ -54,7 +53,7 @@
       <q-card square
         style="border-radius: 10px; overflow: hidden; background: linear-gradient(to bottom, #FFFFFF, #FFFFFF)">
         <q-card-section style="text-align: center; padding: 0px">
-          <h2 style="font-size: 40px">Ул. Абая, дом 2</h2>
+          <h2 style="font-size: 40px">{{ $t("location.title") }}</h2>
         </q-card-section>
 
         <q-card-section style="text-align: center; padding: 30px; padding-top: 0px">

@@ -9,6 +9,18 @@
           &nbsp;&nbsp;<a href="/"><img src="/images/logo.png" height="50" style="padding-top: 8px" /></a>
         </q-toolbar-title>
 
+        <q-toolbar-title style="text-align: end; padding-right: 20px">
+          <q-btn flat>
+
+            <q-list style="width: 80px">
+              <q-select v-model="locale" :options="localeOptions" dense borderless emit-value map-options
+                options-dense style="padding: 10px">
+              </q-select>
+            </q-list>
+
+          </q-btn>
+        </q-toolbar-title>
+
       </q-toolbar>
     </q-header>
 
@@ -16,7 +28,7 @@
       style="background: linear-gradient(to bottom, #ffffff, #ffffff)">
       <q-list>
         <q-item-label header style="color: #000000">
-          Полезные ссылки
+          {{ $t('drawer.title') }}
         </q-item-label>
 
         <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
@@ -44,24 +56,22 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
     title: 'Instagram',
     icon: 'ion-logo-instagram',
-    caption: 'Ещё больше фото здесь',
     link: 'https://instagram.com'
   },
   {
     title: 'Twitter',
-    caption: 'Наш аккаунт в Twitter',
     icon: 'ion-logo-twitter',
     link: 'https://x.com'
   },
   {
     title: 'WhatsApp',
-    caption: 'Мы в WhatsApp',
     icon: 'ion-logo-whatsapp',
     link: 'https://facebook.com'
   }
@@ -75,6 +85,8 @@ export default defineComponent({
   },
 
   setup() {
+    const { locale } = useI18n({ useScope: 'global' })
+    const t = useI18n({ useScope: 'global' })
     const leftDrawerOpen = ref(false)
 
     return {
@@ -82,7 +94,13 @@ export default defineComponent({
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      },
+      locale,
+      localeOptions: [
+        { value: 'kz', label: 'KZ' },
+        { value: 'ru', label: 'RU' },
+        { value: 'en-US', label: 'EN' },
+      ]
     }
   }
 })
